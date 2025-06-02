@@ -1,0 +1,5 @@
+02/06/2025 18:02:24 - INFO - Iniciando Assistente Virtual de Tarefas
+02/06/2025 18:02:24 - INFO - file_cache is only supported with oauth2client<4.0.0
+02/06/2025 18:02:27 - INFO - Gerenciador de tarefas inicializado com sucesso
+02/06/2025 18:02:45 - INFO - Executando comando: agendar reunião com cliente dia 10/06 às 15h na sala 3
+02/06/2025 18:03:15 - INFO - Assistente encerrado pelo usuário

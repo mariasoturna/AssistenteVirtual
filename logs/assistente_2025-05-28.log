@@ -1,0 +1,55 @@
+28/05/2025 14:40:00 - INFO - Iniciando Assistente Virtual de Tarefas
+28/05/2025 14:40:08 - INFO - "GET /?state=QwTX7GXegCgUcEDEdlzkAUuPmfXrtz&code=4/0AUJR-x4Njksy0yi-32r8VAr6ETSspyPTHdW2pNdWpobQltbId0Tnh-Y0qdt5sVne2cS2qQ&scope=https://www.googleapis.com/auth/calendar HTTP/1.1" 200 65
+28/05/2025 14:40:08 - INFO - file_cache is only supported with oauth2client<4.0.0
+28/05/2025 14:40:09 - INFO - Gerenciador de tarefas inicializado com sucesso
+28/05/2025 14:41:05 - INFO - Executando comando: Agendar consulta para amanhã às 14h.
+28/05/2025 14:41:21 - INFO - Assistente encerrado pelo usuário
+28/05/2025 15:24:32 - INFO - Iniciando Assistente Virtual de Tarefas
+28/05/2025 15:24:32 - INFO - file_cache is only supported with oauth2client<4.0.0
+28/05/2025 15:24:34 - INFO - Gerenciador de tarefas inicializado com sucesso
+28/05/2025 15:24:37 - INFO - Assistente encerrado pelo usuário
+28/05/2025 15:36:01 - INFO - Iniciando Assistente Virtual de Tarefas
+28/05/2025 15:36:01 - INFO - file_cache is only supported with oauth2client<4.0.0
+28/05/2025 15:36:02 - INFO - Gerenciador de tarefas inicializado com sucesso
+28/05/2025 15:36:22 - INFO - Assistente encerrado pelo usuário
+28/05/2025 16:50:31 - INFO - Iniciando Assistente Virtual de Tarefas
+28/05/2025 16:50:40 - INFO - "GET /?state=DLITdeDft9wTVFbJr05oLeu1nt8H4H&code=4/0AUJR-x7tKaAdlbks--qeMyqxx5vV4aDlhD458aafSQ55itlTt3Q6uXSYL4LUINGWTvdy9w&scope=https://www.googleapis.com/auth/calendar HTTP/1.1" 200 65
+28/05/2025 16:50:40 - INFO - file_cache is only supported with oauth2client<4.0.0
+28/05/2025 16:50:41 - INFO - Gerenciador de tarefas inicializado com sucesso
+28/05/2025 16:50:44 - INFO - Assistente encerrado pelo usuário
+28/05/2025 16:52:54 - INFO - Iniciando Assistente Virtual de Tarefas
+28/05/2025 16:52:54 - INFO - file_cache is only supported with oauth2client<4.0.0
+28/05/2025 16:52:54 - INFO - Gerenciador de tarefas inicializado com sucesso
+28/05/2025 16:53:26 - INFO - Executando comando: Marcar reunião às 12h amanhã.
+28/05/2025 16:53:43 - INFO - Executando comando: Comprar café amanhã.
+28/05/2025 17:00:23 - INFO - Iniciando Assistente Virtual de Tarefas com Interface Gráfica
+28/05/2025 17:00:24 - INFO - file_cache is only supported with oauth2client<4.0.0
+28/05/2025 17:00:25 - INFO - Interface gráfica inicializada com sucesso
+28/05/2025 18:26:14 - INFO - Iniciando Assistente Virtual de Tarefas
+28/05/2025 18:26:15 - INFO - file_cache is only supported with oauth2client<4.0.0
+28/05/2025 18:26:16 - INFO - Gerenciador de tarefas inicializado com sucesso
+28/05/2025 18:26:26 - INFO - Assistente encerrado pelo usuário
+28/05/2025 18:27:08 - INFO - Iniciando Assistente Virtual de Tarefas
+28/05/2025 18:27:08 - INFO - file_cache is only supported with oauth2client<4.0.0
+28/05/2025 18:27:09 - INFO - Gerenciador de tarefas inicializado com sucesso
+28/05/2025 18:27:28 - INFO - Executando comando: Marcar reunião amanhã às 15h.
+28/05/2025 18:31:38 - INFO - Iniciando Assistente Virtual de Tarefas
+28/05/2025 18:31:39 - INFO - file_cache is only supported with oauth2client<4.0.0
+28/05/2025 18:31:39 - INFO - Gerenciador de tarefas inicializado com sucesso
+28/05/2025 18:31:50 - INFO - Executando comando: Marcar reunião.
+28/05/2025 18:32:01 - INFO - Executando comando: 1
+28/05/2025 18:32:28 - INFO - Assistente encerrado pelo usuário
+28/05/2025 18:36:23 - INFO - Iniciando Assistente Virtual de Tarefas
+28/05/2025 18:36:23 - INFO - file_cache is only supported with oauth2client<4.0.0
+28/05/2025 18:36:24 - INFO - Gerenciador de tarefas inicializado com sucesso
+28/05/2025 18:36:26 - INFO - Assistente encerrado pelo usuário
+28/05/2025 18:37:45 - INFO - Iniciando Assistente Virtual de Tarefas
+28/05/2025 18:37:45 - INFO - file_cache is only supported with oauth2client<4.0.0
+28/05/2025 18:37:46 - INFO - Gerenciador de tarefas inicializado com sucesso
+28/05/2025 18:38:07 - INFO - Executando comando: Marcar reunião às 19h.
+28/05/2025 18:38:35 - INFO - Executando comando: Marcar reunião às 19h para o dia 02/06.
+28/05/2025 18:38:44 - INFO - Assistente encerrado pelo usuário
+28/05/2025 18:46:50 - INFO - Iniciando Assistente Virtual de Tarefas
+28/05/2025 18:46:50 - INFO - file_cache is only supported with oauth2client<4.0.0
+28/05/2025 18:46:51 - INFO - Gerenciador de tarefas inicializado com sucesso
+28/05/2025 18:47:04 - INFO - Assistente encerrado pelo usuário

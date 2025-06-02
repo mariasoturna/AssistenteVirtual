@@ -1,0 +1,19 @@
+30/05/2025 17:08:07 - INFO - Iniciando Assistente Virtual de Tarefas
+30/05/2025 17:08:07 - INFO - file_cache is only supported with oauth2client<4.0.0
+30/05/2025 17:08:09 - INFO - Gerenciador de tarefas inicializado com sucesso
+30/05/2025 17:08:12 - INFO - Assistente encerrado pelo usuário
+30/05/2025 18:08:36 - INFO - Iniciando Assistente Virtual de Tarefas
+30/05/2025 18:08:37 - INFO - file_cache is only supported with oauth2client<4.0.0
+30/05/2025 18:08:44 - INFO - Gerenciador de tarefas inicializado com sucesso
+30/05/2025 18:09:11 - INFO - Executando comando: Marcar reunião às 16h.
+30/05/2025 18:17:55 - INFO - Assistente encerrado pelo usuário
+30/05/2025 18:18:04 - INFO - Iniciando Assistente Virtual de Tarefas
+30/05/2025 18:18:13 - INFO - "GET /?state=O43HsJ7Y9c4qc6cRGC6z04HfQBgtCy&code=4/0AUJR-x7a_rGWxkmwgQrVGh3vfOM3_iJMRaq9rU2MBbAFv8iZDIOvaj7qyCfYZSMW6lsWAg&scope=https://www.googleapis.com/auth/calendar HTTP/1.1" 200 65
+30/05/2025 18:18:14 - INFO - file_cache is only supported with oauth2client<4.0.0
+30/05/2025 18:18:14 - INFO - Gerenciador de tarefas inicializado com sucesso
+30/05/2025 18:18:57 - INFO - Executando comando: Comprar pepino amanhã no mercado.
+30/05/2025 18:19:03 - INFO - Assistente encerrado pelo usuário
+30/05/2025 19:09:09 - INFO - Iniciando Assistente Virtual de Tarefas
+30/05/2025 19:09:09 - INFO - file_cache is only supported with oauth2client<4.0.0
+30/05/2025 19:09:14 - INFO - Gerenciador de tarefas inicializado com sucesso
+30/05/2025 19:11:49 - INFO - Assistente encerrado pelo usuário

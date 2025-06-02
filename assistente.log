@@ -1,0 +1,18 @@
+2025-05-27 15:48:19,930 - "GET /?state=ph6NoTcpmnX8hUAD7SQB7sI0AbtgUk&code=4/0AUJR-x6XSvmVpIcJ-9WW3krohrF6ppfR2W_XgzkbmL8OIgE-2Zb6g-kHjNyL9ybDhhNDoA&scope=https://www.googleapis.com/auth/calendar HTTP/1.1" 200 65
+2025-05-27 15:48:20,701 - file_cache is only supported with oauth2client<4.0.0
+2025-05-27 16:15:18,562 - "GET /?state=2AZxMdvgdZEp344mWGaAyNUEVWxwxp&code=4/0AUJR-x4vC1M_1-DBxi-lRiz0ca9llXQeW3dgegOtSdF7z5BRP8WBLDkn5jNF_bOKrQxenQ&scope=https://www.googleapis.com/auth/calendar HTTP/1.1" 200 65
+2025-05-27 16:15:19,294 - file_cache is only supported with oauth2client<4.0.0
+2025-05-27 16:43:37,981 - "GET /?state=36ArX7B9GanlOAWPs3bFvz1dNIQ8Wx&code=4/0AUJR-x6uN_KIO2iU9gcEQejb20GGFwvELcoqI_AoM7CgpUKSsj8mydQeUQi11iSKV28DVg&scope=https://www.googleapis.com/auth/calendar HTTP/1.1" 200 65
+2025-05-27 16:43:38,356 - file_cache is only supported with oauth2client<4.0.0
+2025-05-27 16:50:56,062 - "GET /?state=RrLGv7E31LhoNPxFJIKFzFwN28bxXX&code=4/0AUJR-x5D8iiQ9irrRuz_q1Rf2SfCkFw5nmAhKKfjUy2nyvMHHPgV1fCU4R7npUUJ8x5zZw&scope=https://www.googleapis.com/auth/calendar HTTP/1.1" 200 65
+2025-05-27 16:50:56,394 - file_cache is only supported with oauth2client<4.0.0
+2025-05-27 16:55:12,973 - "GET /?state=cgl4mOdqvUcm9FkuR9WUz4sGoVXisP&code=4/0AUJR-x7bE0kBb6-6lR7oxZsY9aszj1GLnaNnrMck6dytz8KvoawVZfFLQOjnJHZXHsD4IQ&scope=https://www.googleapis.com/auth/calendar HTTP/1.1" 200 65
+2025-05-27 16:55:13,337 - file_cache is only supported with oauth2client<4.0.0
+2025-05-27 18:46:57,250 - "GET /?state=s2evKxT0S8pvZVMaWThVVa3Bw1yINS&code=4/0AUJR-x6Jdhe64Y1_7IrNZUSU6FkmLuCgwcYxB747M8Y75KgxmeaBz0nkiNgcfXNTUxFWmg&scope=https://www.googleapis.com/auth/calendar HTTP/1.1" 200 65
+2025-05-27 18:46:57,640 - file_cache is only supported with oauth2client<4.0.0
+27/05/2025 18:58:18 - INFO - "GET /?state=fHxQ5D0ev2ASUnzMmiXk0GN43mHPiM&code=4/0AUJR-x72pxKNdPdXXPpbW2m3t60uU-ByD6aYLhZauilCjAZQgVdtRlV4i0nJJZ9VncnbtQ&scope=https://www.googleapis.com/auth/calendar HTTP/1.1" 200 65
+27/05/2025 18:58:19 - INFO - file_cache is only supported with oauth2client<4.0.0
+27/05/2025 19:14:36 - INFO - "GET /?state=B6fsmXcJuCOdZsNNxEwUhFIUY6et7u&code=4/0AUJR-x6LBvqJj7YCE86DSJCWPsLzK3B0hu_OliDPXQCNXRS_1Mcv6VHJeOjtBPsAhS-m-g&scope=https://www.googleapis.com/auth/calendar HTTP/1.1" 200 65
+27/05/2025 19:14:36 - INFO - file_cache is only supported with oauth2client<4.0.0
+27/05/2025 20:57:37 - INFO - "GET /?state=PD0fJwqPr5pF3yE2fbWTPCkvO966v4&code=4/0AUJR-x7OcI5eN7VzxwuSQzdS4vZIzECnSrdZ7j69NQC4vQNmIPM7Pqu_kbwbUdRwNrPRQA&scope=https://www.googleapis.com/auth/calendar HTTP/1.1" 200 65
+27/05/2025 20:57:37 - INFO - file_cache is only supported with oauth2client<4.0.0
