@@ -36,22 +36,18 @@ class GerenciadorCalendarioGoogle:
             if self.credentials and self.credentials.expired and self.credentials.refresh_token:
                 self.credentials.refresh(Request())
             else:
-                # ⚠️ Lê as credenciais do JSON via variável de ambiente
                 credentials_json = os.environ.get("GOOGLE_CREDENTIALS_JSON")
                 if not credentials_json:
                     raise Exception("A variável de ambiente 'GOOGLE_CREDENTIALS_JSON' não está definida.")
                 credentials_data = json.loads(credentials_json)
 
                 flow = InstalledAppFlow.from_client_config(credentials_data, SCOPES)
-                self.credentials = flow.run_local_server(port=8080)
+                self.credentials = flow.run_console()  # <--- ALTERADO AQUI
 
             with open(self.token_path, 'wb') as token:
                 pickle.dump(self.credentials, token)
 
         self.service = build('calendar', 'v3', credentials=self.credentials)
-
-    # As demais funções permanecem exatamente como estavam
-    # ...
 
     def adicionar_evento(self, titulo, inicio, fim, descricao="", local="", cor=None, fuso_horario=None):
         if fuso_horario is None:
