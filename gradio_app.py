@@ -6,7 +6,10 @@ import os
 
 load_dotenv()
 
-cal = GerenciadorCalendarioGoogle()
+cal = GerenciadorCalendarioGoogle(
+    credentials_path=os.path.join(os.getcwd(), "credentials.json"),
+    token_path=os.path.join(os.getcwd(), "token.pickle")
+)
 
 
 def criar_evento(titulo, inicio, fim, descricao, local, cor):
@@ -31,7 +34,12 @@ def listar_eventos(max_resultados):
 
 def buscar_horarios(inicio, fim, duracao):
     try:
-        # Converte strings para objetos datetime
+        # Remove o sufixo 'Z' se presente
+        if inicio.endswith("Z"):
+            inicio = inicio[:-1]
+        if fim.endswith("Z"):
+            fim = fim[:-1]
+
         inicio_dt = datetime.fromisoformat(inicio)
         fim_dt = datetime.fromisoformat(fim)
 
@@ -63,8 +71,7 @@ def excluir_evento(evento_id):
             return "✅ Evento excluído com sucesso."
         return "❌ Evento não encontrado ou erro na exclusão."
     except Exception as e:
-        print(f"Erro ao excluir evento: {e}")
-        return "❌ Erro ao excluir evento."
+        return f"❌ Erro ao excluir evento: {str(e)}"
 
 with gr.Blocks(title="Gerenciador Google Calendar") as app:
     gr.Markdown("# 🗓️ Assistente de Tarefas com Google Calendar")
@@ -89,8 +96,8 @@ with gr.Blocks(title="Gerenciador Google Calendar") as app:
         botao_listar.click(fn=listar_eventos, inputs=[max_resultados], outputs=[saida_listar])
 
     with gr.Tab("Buscar Horários Livres"):
-        data_inicio = gr.Text(label="Início (YYYY-MM-DDTHH:MM:SSZ)")
-        data_fim = gr.Text(label="Fim (YYYY-MM-DDTHH:MM:SSZ)")
+        data_inicio = gr.Text(label="Início (YYYY-MM-DDTHH:MM:SS ou com Z)")
+        data_fim = gr.Text(label="Fim (YYYY-MM-DDTHH:MM:SS ou com Z)")
         duracao = gr.Number(label="Duração mínima (min)", value=60)
         botao_buscar = gr.Button("Buscar")
         saida_busca = gr.Textbox(label="Horários livres", lines=10)
@@ -111,4 +118,6 @@ with gr.Blocks(title="Gerenciador Google Calendar") as app:
         botao_del.click(fn=excluir_evento, inputs=[evento_id_del], outputs=[saida_del])
 
 if __name__ == "__main__":
-    app.launch(server_name="0.0.0.0", server_port=10000)
+    app.launch()
+
+

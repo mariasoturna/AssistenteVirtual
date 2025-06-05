@@ -33,8 +33,7 @@ class GerenciadorCalendarioGoogle:
             if self.credentials and self.credentials.expired and self.credentials.refresh_token:
                 self.credentials.refresh(Request())
             else:
-                flow = InstalledAppFlow.from_client_secrets_file(
-                    self.credentials_path, SCOPES)
+                flow = InstalledAppFlow.from_client_secrets_file(self.credentials_path, SCOPES)
                 self.credentials = flow.run_local_server(port=8080)
             with open(self.token_path, 'wb') as token:
                 pickle.dump(self.credentials, token)
@@ -102,7 +101,6 @@ class GerenciadorCalendarioGoogle:
 
     def buscar_horarios_livres(self, data_inicio, data_fim, duracao_minutos=60):
         try:
-            # Se os dados forem string, converte para datetime
             if isinstance(data_inicio, str):
                 if data_inicio.endswith("Z"):
                     data_inicio = data_inicio[:-1]

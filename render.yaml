@@ -9,3 +9,10 @@ services:
         value: credentials.json
       - key: PYTHONUNBUFFERED
         value: "1"
+
+  - type: web
+    name: assistente-tarefas
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python gradio_app.py
+    plan: free
