@@ -17,7 +17,8 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 class GerenciadorCalendarioGoogle:
-    def __init__(self, token_path='token.pickle'):
+    def __init__(self, credentials_path='credentials.json', token_path='token.json'):
+        self.credentials_path = credentials_path
         self.token_path = token_path
         self.fuso_horario = "America/Sao_Paulo"
         self.credentials = None
