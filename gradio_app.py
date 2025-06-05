@@ -1,8 +1,13 @@
 import gradio as gr
 from utils.calendario.google import GerenciadorCalendarioGoogle
 from datetime import datetime
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 cal = GerenciadorCalendarioGoogle()
+
 
 def criar_evento(titulo, inicio, fim, descricao, local, cor):
     try:
@@ -26,7 +31,11 @@ def listar_eventos(max_resultados):
 
 def buscar_horarios(inicio, fim, duracao):
     try:
-        slots = cal.buscar_horarios_livres(inicio, fim, int(duracao))
+        # Converte strings para objetos datetime
+        inicio_dt = datetime.fromisoformat(inicio)
+        fim_dt = datetime.fromisoformat(fim)
+
+        slots = cal.buscar_horarios_livres(inicio_dt, fim_dt, int(duracao))
         if not slots:
             return "Nenhum horário livre encontrado."
         return "\n".join([

@@ -1,6 +1,11 @@
 services:
   - type: web
-    name: assistente-tarefas
-    env: python
-    buildCommand: ""
-    startCommand: bash start.sh
+    name: assistente-calendar
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python gradio_app.py
+    envVars:
+      - key: GOOGLE_APPLICATION_CREDENTIALS
+        value: credentials.json
+      - key: PYTHONUNBUFFERED
+        value: "1"
