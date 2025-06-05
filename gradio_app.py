@@ -111,4 +111,4 @@ with gr.Blocks(title="Gerenciador Google Calendar") as app:
         botao_del.click(fn=excluir_evento, inputs=[evento_id_del], outputs=[saida_del])
 
 if __name__ == "__main__":
-    app.launch()
+    app.launch(server_name="0.0.0.0", server_port=10000)
