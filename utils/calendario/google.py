@@ -1,5 +1,6 @@
 import os
 import sys
+import json
 from google_auth_oauthlib.flow import InstalledAppFlow 
 from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials
@@ -16,9 +17,8 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 class GerenciadorCalendarioGoogle:
-    def __init__(self, token_path='token.pickle', credentials_path='credentials.json'):
+    def __init__(self, token_path='token.pickle'):
         self.token_path = token_path
-        self.credentials_path = credentials_path
         self.fuso_horario = "America/Sao_Paulo"
         self.credentials = None
         self.service = None
@@ -26,18 +26,31 @@ class GerenciadorCalendarioGoogle:
 
     def _autenticar(self):
         SCOPES = ['https://www.googleapis.com/auth/calendar']
+
         if os.path.exists(self.token_path):
             with open(self.token_path, 'rb') as token:
                 self.credentials = pickle.load(token)
+
         if not self.credentials or not self.credentials.valid:
             if self.credentials and self.credentials.expired and self.credentials.refresh_token:
                 self.credentials.refresh(Request())
             else:
-                flow = InstalledAppFlow.from_client_secrets_file(self.credentials_path, SCOPES)
+                # ⚠️ Lê as credenciais do JSON via variável de ambiente
+                credentials_json = os.environ.get("GOOGLE_CREDENTIALS_JSON")
+                if not credentials_json:
+                    raise Exception("A variável de ambiente 'GOOGLE_CREDENTIALS_JSON' não está definida.")
+                credentials_data = json.loads(credentials_json)
+
+                flow = InstalledAppFlow.from_client_config(credentials_data, SCOPES)
                 self.credentials = flow.run_local_server(port=8080)
+
             with open(self.token_path, 'wb') as token:
                 pickle.dump(self.credentials, token)
+
         self.service = build('calendar', 'v3', credentials=self.credentials)
+
+    # As demais funções permanecem exatamente como estavam
+    # ...
 
     def adicionar_evento(self, titulo, inicio, fim, descricao="", local="", cor=None, fuso_horario=None):
         if fuso_horario is None:
