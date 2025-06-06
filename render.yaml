@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: assistente-virtual
+    env: python
+    buildCommand: ""
+    startCommand: python app.py

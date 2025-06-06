@@ -29,11 +29,13 @@
 	export let loading_status: LoadingStatus;
 	export let interactive: boolean;
 	export let root: string;
+	export let placeholder: string | undefined = undefined;
 
 	export let gradio: Gradio<{
 		change: never;
 		upload: never;
 		clear: never;
+		clear_status: LoadingStatus;
 	}>;
 
 	$: value, gradio.dispatch("change");
@@ -58,6 +60,7 @@
 			autoscroll={gradio.autoscroll}
 			i18n={gradio.i18n}
 			{...loading_status}
+			on:clear_status={() => gradio.dispatch("clear_status", loading_status)}
 		/>
 		<ImagePreview
 			{value}
@@ -84,9 +87,12 @@
 			autoscroll={gradio.autoscroll}
 			i18n={gradio.i18n}
 			{...loading_status}
+			on:clear_status={() => gradio.dispatch("clear_status", loading_status)}
 		/>
 
 		<ImageUploader
+			upload={(...args) => gradio.client.upload(...args)}
+			stream_handler={(...args) => gradio.client.stream(...args)}
 			bind:value
 			{root}
 			on:clear={() => gradio.dispatch("clear")}
@@ -95,7 +101,7 @@
 			{label}
 			{show_label}
 		>
-			<UploadText i18n={gradio.i18n} type="image" />
+			<UploadText i18n={gradio.i18n} type="image" {placeholder} />
 		</ImageUploader>
 	</Block>
 {/if}

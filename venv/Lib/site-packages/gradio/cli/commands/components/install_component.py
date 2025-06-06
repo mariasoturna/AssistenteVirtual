@@ -3,11 +3,10 @@ from __future__ import annotations
 import shutil
 import subprocess
 from pathlib import Path
-from typing import Optional
+from typing import Annotated, Optional
 
 from rich.markup import escape
 from typer import Argument, Option
-from typing_extensions import Annotated
 
 from gradio.cli.commands.display import LivePanelDisplay
 from gradio.utils import set_directory
@@ -71,6 +70,8 @@ def _install_command(
     if pipe.returncode != 0:
         live.update(":red_square: Python installation [bold][red]failed[/][/]")
         live.update(pipe.stderr)
+        raise SystemExit("Python installation failed")
+
     else:
         live.update(":white_check_mark: Python install succeeded!")
 
@@ -85,6 +86,7 @@ def _install_command(
             live.update(":red_square: NPM install [bold][red]failed[/][/]")
             live.update(pipe.stdout)
             live.update(pipe.stderr)
+            raise SystemExit("NPM install failed")
         else:
             live.update(":white_check_mark: NPM install succeeded!")
 

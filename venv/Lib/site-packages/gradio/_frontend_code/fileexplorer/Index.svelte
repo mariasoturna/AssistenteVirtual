@@ -20,7 +20,9 @@
 	let old_value: string[][];
 	export let label: string;
 	export let show_label: boolean;
-	export let height: number | undefined = undefined;
+	export let height: number | string | undefined;
+	export let min_height: number | string | undefined;
+	export let max_height: number | string | undefined;
 	export let file_count: "single" | "multiple" = "multiple";
 	export let root_dir: string;
 	export let glob: string;
@@ -31,6 +33,7 @@
 	export let min_width: number | undefined = undefined;
 	export let gradio: Gradio<{
 		change: never;
+		clear_status: LoadingStatus;
 	}>;
 	export let server: {
 		ls: (path: string[]) => Promise<FileNode[]>;
@@ -55,13 +58,17 @@
 	{container}
 	{scale}
 	{min_width}
-	allow_overflow={false}
+	allow_overflow={true}
+	overflow_behavior="auto"
 	{height}
+	{max_height}
+	{min_height}
 >
 	<StatusTracker
 		{...loading_status}
 		autoscroll={gradio.autoscroll}
 		i18n={gradio.i18n}
+		on:clear_status={() => gradio.dispatch("clear_status", loading_status)}
 	/>
 	<BlockLabel
 		{show_label}

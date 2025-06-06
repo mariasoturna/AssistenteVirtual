@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { HTMLAnchorAttributes } from "svelte/elements";
-	import { createEventDispatcher } from "svelte";
+	import { createEventDispatcher, onMount } from "svelte";
 
 	interface DownloadLinkAttributes
 		extends Omit<HTMLAnchorAttributes, "target"> {
@@ -76,6 +76,8 @@
 	{/if}
 {:else}
 	<a
+		style:position="relative"
+		class="download-link"
 		{href}
 		target={typeof window !== "undefined" && window.__is_colab__
 			? "_blank"
@@ -88,3 +90,10 @@
 		<slot />
 	</a>
 {/if}
+
+<style>
+	.unstyled-link {
+		all: unset;
+		cursor: pointer;
+	}
+</style>
