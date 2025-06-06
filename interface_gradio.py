@@ -65,4 +65,5 @@ def launch_interface():
     demo.launch()
 
 if __name__ == "__main__":
-    launch_interface()
+     interface.launch(server_port=8080, server_name="0.0.0.0")
+
