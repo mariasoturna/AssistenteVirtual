@@ -1,96 +1,121 @@
+🧠 Assistente Virtual Pessoal para Gerenciamento de Tarefas
 
-# 🧠 Assistente Virtual Pessoal para Gerenciamento de Tarefas
 
-Este projeto é um **assistente virtual pessoal** desenvolvido em Python, com interface web via **Gradio**, que permite aos usuários **gerenciar uma agenda de tarefas simulada**, incluindo criação, listagem, atualização e remoção de compromissos.
+Aplicação desktop desenvolvida em Python (Tkinter + ttkbootstrap) que permite gerenciar uma agenda simples de eventos, além de oferecer um bloco de notas integrado.
+Ideal para estudos, apresentações acadêmicas e uso pessoal.
 
----
 
-## 📌 Funcionalidades
+📌 Funcionalidades
+🗂️ Gerenciamento de Eventos
 
-- ✅ Criar novos compromissos
-- 📅 Listar eventos do dia atual
-- ✏️ Atualizar eventos existentes
-- ❌ Remover eventos por título ou data
-- 💬 Interface interativa com linguagem natural
-- 🌐 Acesso fácil via navegador com deploy no Render
 
----
 
-## 🛠 Tecnologias Utilizadas
+➕ Criar novos eventos
 
-- **Python 3.10+**
-- **Gradio 4.32.1**
-- Hospedagem: [Render](https://render.com/)
+✏️ Editar eventos existentes
 
----
+❌ Deletar um evento específico
 
-## 📁 Estrutura do Projeto
+🗑️ Deletar todos os eventos de uma só vez
 
-```
-meu_assistente_virtual/
+📋 Exibir lista completa de eventos cadastrados
+
+✔ Validação automática de data e hora
+
+📝 Registro automático de ações no arquivo notas.txt
+
+📝 Bloco de Notas Integrado
+
+
+
+Visualizar anotações já existentes
+
+Criar novas anotações
+
+Salvar alterações diretamente no arquivo notas.txt
+
+Limpar o conteúdo do bloco de notas
+
+
+
+🎨 Interface Moderna
+
+Construída com ttkbootstrap, permitindo um visual moderno e profissional
+
+Organização em abas (tabs):
+
+Criar Evento
+
+Gerenciar Eventos
+
+Bloco de Notas
+
+
+
+🛠️ Tecnologias Utilizadas
+
+Python 3.10+
+
+Tkinter
+
+ttkbootstrap (tema moderno para Tkinter)
+
+
+
+📁 Estrutura do Projeto
+assistente_tarefas/
 │
-├── app.py               # Arquivo principal com a interface Gradio
-├── agenda_simulada.py   # Simulação das funcionalidades de agenda
-├── requirements.txt     # Dependência do projeto
-├── render.yaml          # Configuração do deploy na Render
-└── README.md            # Documentação do projeto
-```
+├── main.py           # Código principal da aplicação (interface + lógica)
+├── notas.txt         # Arquivo de anotações gerado automaticamente
+├── README.md         # Documentação do projeto
+└── requirements.txt  # Dependências do projeto
 
----
 
-## ▶️ Como Executar Localmente
+▶️ Como Executar o Projeto
+1️⃣ Instale as dependências
 
-1. **Clone o repositório:**
+No terminal:
 
-```bash
-git clone https://github.com/mariastourna/AssistenteVirtual.git
-cd AssistenteVirtual
-```
+pip install ttkbootstrap
 
-2. **Crie um ambiente virtual (opcional, mas recomendado):**
+Ou, caso use o arquivo requirements.txt:
 
-```bash
-python -m venv venv
-source venv/bin/activate  # Linux/macOS
-venv\Scripts\activate     # Windows
-```
-
-3. **Instale as dependências:**
-
-```bash
 pip install -r requirements.txt
-```
 
-4. **Execute o aplicativo:**
 
-```bash
-python app.py
-```
+2️⃣ Execute o programa
+python main.py
 
-O Gradio abrirá automaticamente no navegador ou informará uma URL local para acesso.
 
----
+A interface será aberta imediatamente.
 
-## 🌐 Deploy Online
 
-O projeto pode ser acessado facilmente através do Render após configuração do repositório e deploy. O serviço usa `render.yaml` para automatizar o processo de build e execução.
 
----
+🗂️ Sobre o Arquivo notas.txt
 
-## 📅 Simulação de Agenda
+Esse arquivo é criado automaticamente na primeira execução.
 
-Todos os dados são armazenados em memória (não há banco de dados), simulando uma agenda simples. Ideal para apresentações ou testes de funcionalidades.
+Ele armazena:
 
----
+Registros de ações (adicionar, editar e remover eventos)
 
-## ✨ Demonstração
+Todas as anotações escritas no bloco de notas
 
-[🔗 Link para o app no Render](https://seu-link-do-render.onrender.com)
+Você pode apagá-lo manualmente se quiser reiniciar tudo.
 
----
 
-## 👩‍💻 Autora
 
-| Nome | GitHub |
-|------|--------|
-| Maria | [@mariastourna](https://github.com/mariastourna) |
+💡 Possíveis Melhorias Futuras
+
+Salvamento permanente dos eventos (JSON ou SQLite)
+
+Filtros por data
+
+Notificações automáticas
+
+Exportação da agenda
+
+
+👩‍💻 Autora
+Nome	   GitHub
+Maria	   @mariastourna
